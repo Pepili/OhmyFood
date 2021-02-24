@@ -1,3 +1,11 @@
-
+/* Polices */
+@font-face {
+  font-family: "robotoregular";
+  src: url("Roboto-Regular-webfont.woff") format("woff");
+  src: url("Roboto-Regular-webfont.ttf") format("truetype"), url("Roboto-Regular-webfont.eot"), url("Roboto-Regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/*Charte*/
 
 /*# sourceMappingURL=style.css.map */
