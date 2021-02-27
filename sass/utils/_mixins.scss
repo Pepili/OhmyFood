@@ -3,14 +3,6 @@
     display:flex;
     flex-direction: column;    
     text-align:center;
-    width:100%;
+    width:100%;    
 }
 
-/*style*/
-@mixin visited{ 
-a:visited 
-{
-    text-decoration: none;
-    color: #000000;
-}
-}
