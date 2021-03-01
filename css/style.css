@@ -1,3 +1,5 @@
+/*Charte*/
+/*Mise en page*/
 /* Polices */
 /* roboto-regular - latin */
 @font-face {
@@ -36,8 +38,6 @@ body {
   padding: 0;
 }
 
-/*Charte*/
-/*Mise en page*/
 @media all and (max-width: 599px) {
   /*HEADER*/
   header {
@@ -47,18 +47,55 @@ body {
     width: 100%;
   }
   header .logo1 {
-    padding: 30px 0 10px 0;
+    height: 80px;
+  }
+  header .logo1 img {
+    padding-top: 30px;
   }
   header p {
-    background-color: #e6e6e6;
+    background-color: #ebebeb;
     margin: 0;
-    padding: 20px 0 20px 0;
+    height: 60px;
+    line-height: 60px;
     font-size: large;
     padding-right: 10px;
     box-shadow: inset -1px 5px 5px -2px #b9b8b9;
   }
   header p i {
-    margin-right: 15px;
+    width: 40px;
+    text-align: left !important;
+  }
+
+  /*HEADER menu1*/
+  header .logo1 i {
+    position: relative;
+    right: 100px;
+    top: -5px;
+  }
+
+  .img {
+    width: 100%;
+    position: relative;
+    margin: 0;
+    height: 300px;
+  }
+  .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .img figcaption {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    font-size: x-large;
+    font-weight: bold;
+    width: 100%;
+    height: 30%;
+    border-radius: 60px 60px 0 0;
+    padding: 40px;
+    top: 240px;
+    background-color: #f7f7f7;
   }
 
   /*SECTION 1*/
@@ -67,34 +104,50 @@ body {
     flex-direction: column;
     text-align: center;
     width: 100%;
-    padding: 40px 0 40px 0;
-    margin-bottom: 50px;
+    padding: 40px 0 80px 0;
+    margin-bottom: 80px;
     background-color: #f7f7f7;
   }
   .section1__label {
     font-size: xx-large;
     font-weight: bold;
-    margin: 0 0 20px 0;
+    margin-bottom: 20px !important;
+    width: 85%;
+    margin: auto;
   }
   .section1 p {
     font-size: x-large;
-    margin-top: 0;
-    margin-bottom: 40px;
+    width: 85%;
+    margin: auto;
   }
-  .section1__btn {
-    text-decoration: none;
+  .section1 .btn {
     color: white;
     font-size: x-large;
     background: linear-gradient(to bottom right, #FF79DA, #9356DC);
     box-shadow: 0px 6px 14px 1px #bdbdbd;
     border-radius: 40px;
-    padding: 18px 25px 18px 25px;
-    width: max-content;
+    width: 60%;
     margin: auto;
-    margin-bottom: 30px;
+    margin-top: 40px;
+    height: 65px;
+    line-height: 65px;
   }
 
   /*SECTION 2*/
+
+  /*SECTION 3*/
+
+  /*FOOTER*/
+
+  /*form menu*/
+}
+@media all and (max-width: 599px) and (max-width: 388px) {
+  .section1 .btn {
+    width: 70%;
+    font-size: large;
+  }
+}
+@media all and (max-width: 599px) {
   .section2 {
     margin-bottom: 80px;
   }
@@ -103,23 +156,27 @@ body {
     margin-left: 20px;
     font-weight: bold;
   }
-  .section2__list {
-    list-style: none;
-  }
   .section2__list li {
     position: relative;
     font-size: x-large;
-    padding: 20px;
     padding-left: 40px;
     width: 90%;
     margin: auto;
-    background-color: whitesmoke;
     box-shadow: 0px 4px 14px 5px #dbdbdb;
     border-radius: 25px;
-    margin-bottom: 30px;
-    margin-left: 30px;
     font-weight: bold;
+    height: 90px;
+    line-height: 90px;
+    margin-bottom: 30px;
   }
+}
+@media all and (max-width: 599px) and (max-width: 380px) {
+  .section2__list li {
+    font-size: large;
+    padding-left: 25px;
+  }
+}
+@media all and (max-width: 599px) {
   .section2__list li::before {
     display: inline-block;
     background-color: #9356DC;
@@ -135,29 +192,51 @@ body {
     left: -10px;
     transform: translateY(-50%);
   }
+}
+@media all and (max-width: 599px) and (max-width: 380px) {
+  .section2__list li::before {
+    height: 24px;
+    width: 24px;
+    font-size: 16px;
+  }
+}
+@media all and (max-width: 599px) {
   .section2__list li:nth-of-type(1)::before {
     content: "1";
   }
+}
+@media all and (max-width: 599px) {
   .section2__list li:nth-of-type(2)::before {
     content: "2";
   }
+}
+@media all and (max-width: 599px) {
   .section2__list li:nth-of-type(3)::before {
     content: "3";
   }
+}
+@media all and (max-width: 599px) {
   .section2__list li i {
     width: 50px;
     color: grey;
   }
-
-  /*SECTION 3*/
+}
+@media all and (max-width: 599px) and (max-width: 380px) {
+  .section2__list li i {
+    width: 25px;
+  }
+}
+@media all and (max-width: 599px) {
   .section3 {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-color: whitesmoke;
+    background-color: #f7f7f7;
+    padding: 70px 0 70px 0;
   }
   .section3__title {
     font-size: xx-large;
+    margin-top: 0;
     margin-left: 20px;
     font-weight: bold;
   }
@@ -182,7 +261,6 @@ body {
     display: flex;
     flex-direction: column;
     font-size: large;
-    line-height: 25px;
     background-color: #ffffff;
     width: 100%;
     height: 25%;
@@ -211,11 +289,12 @@ body {
     top: -210px;
     color: #30a88a;
   }
-
-  /*FOOTER*/
+}
+@media all and (max-width: 599px) {
   footer {
-    padding: 20px;
-    margin-top: 40px;
+    padding: 30px;
+    width: 100%;
+    margin: 0;
     color: #efefef;
     background-color: #302f2f;
     padding-bottom: 15px;
@@ -225,12 +304,56 @@ body {
     font-size: x-large;
   }
   footer li {
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     font-size: large;
+  }
+  footer li a {
+    color: #efefef;
   }
   footer li i {
     padding-right: 10px;
     width: 20px;
+  }
+}
+@media all and (max-width: 599px) {
+  form {
+    background-color: #f7f7f7;
+    padding-top: 50px;
+    width: 95%;
+    margin: auto;
+  }
+  form fieldset {
+    border: none;
+    padding-bottom: 40px;
+  }
+  form fieldset input[type=radio] {
+    display: none;
+  }
+  form fieldset label {
+    box-shadow: 0px 4px 14px 5px #dbdbdb;
+    background: white;
+    height: 90px;
+    width: 90%;
+    margin: auto;
+  }
+  form .btn {
+    color: white;
+    font-size: x-large;
+    background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+    box-shadow: 0px 6px 14px 1px #bdbdbd;
+    border-radius: 40px;
+    width: 60%;
+    margin: auto;
+    margin-top: 40px;
+    height: 65px;
+    line-height: 65px;
+    border: none;
+  }
+}
+@media all and (max-width: 599px) and (max-width: 388px) {
+  form .btn {
+    width: 70%;
+    font-size: large;
   }
 }
 

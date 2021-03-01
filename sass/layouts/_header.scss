@@ -1,0 +1,59 @@
+/*HEADER*/
+header{
+    @include mep;
+     .logo1{
+         height:80px;
+         img{
+             padding-top:30px;
+         }                  
+     }
+     p{
+         background-color: darken($color: white, $amount: 8%);
+         margin:0;
+         height:60px;
+         line-height: 60px;
+         font-size: large;
+         padding-right:10px;
+         box-shadow: inset -1px 5px 5px -2px rgb(185, 184, 185);
+         i{
+             width:40px;
+             text-align:left !important;
+         }
+     }
+ }
+ /*HEADER menu1*/
+ header{
+     .logo1{
+         i{
+             position:relative;
+             right:100px;
+             top:-5px;
+         }
+         
+     }
+       
+ }
+ .img{
+     width:100%;
+     position:relative;
+     margin:0;
+     height:300px;
+     img{
+         width:100%;
+         height:100%;
+         object-fit: cover;
+     }
+     figcaption{
+         position:absolute;
+         display:flex;
+         justify-content: space-between;
+         font-size:x-large;
+         font-weight:bold;
+         width:100%;
+         height:30%;
+         border-radius:60px 60px 0 0;
+         padding:40px;
+         top:240px;
+         @include background;         
+     }     
+ }

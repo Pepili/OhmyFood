@@ -1,0 +1,27 @@
+/*FOOTER*/
+footer{
+    padding:30px;
+    width:100%;
+    margin:0;    
+    color:lighten($color: rgb(48, 47, 47), $amount: 75%); 
+    background-color:rgb(48, 47, 47);
+    padding-bottom: 15px;
+    .logo2{
+        font-family: 'Shrikhand-Regular';
+        font-size:x-large;
+    } 
+    
+    
+        li{
+            padding-bottom: 10px; 
+            font-size:large;
+            a{
+                color:lighten($color: rgb(48, 47, 47), $amount: 75%);
+            }
+            i{
+                padding-right:10px;                
+                width:20px;            
+            }          
+        }
+        
+    } 
