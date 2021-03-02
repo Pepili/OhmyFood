@@ -10,9 +10,9 @@
 </head>
 
 <body>
-    <header>
-        <div class="logo1"><a href="index.html"><i class="fas fa-arrow-left fa-2x"></i></a><img src="images/logo/ohmyfood@2x.svg" alt="logo"/></div>        
-    </header>
+    <div class="header">
+        <a href="index.html"><i class="fas fa-arrow-left fa-big"></i></a><div class="logo1"><img src="images/logo/ohmyfood@2x.svg" alt="logo"/></div>        
+    </div>
     <figure class="img">
         <img src="images/restaurants/alafrancaise.jpg" alt="alafrancaise"/>
         <figcaption>A la française <i class="far fa-heart fa-lg"></i></figcaption>
@@ -22,67 +22,77 @@
             <legend>ENTREES</legend>
             <input type="radio" name="entree" value="tartare" id="tartare"/>
             <label for="tartare">
-                <div class="plat">Tartare de poulpe acidulé</div>
-                Aux zestes d'orange
-                <span class="prix">25€</span></label>
+                <span class="plat">Tartare de poulpe acidulé</span>
+                <p>Aux zestes d'orange</p>
+                <span class="price">25€</span></label>
             
             <input type="radio" name="entree" value="velouté" id="velouté"/>
             <label for="velouté">
-                <div class="plat">Velouté de légumes d'antan</div>
-                Carotte, panais, topinambour
-                <span class="prix">35€</span></label>
+                <span class="plat">Velouté de légumes d'antan</span>
+                <p>Carotte, panais, topinambour</p>
+                <span class="price">35€</span></label>
 
             <input type="radio" name="entree" value="soupe" id="soupe"/>
             <label for="soupe">
-                <div class="plat">Soupe à l'oignon</div>
-                Revisitée
-                <span class="prix">20€</span></label>
+                <span class="plat">Soupe à l'oignon</span>
+                <p>Revisitée</p>
+                <span class="price">20€</span></label>
         </fieldset>
 
         <fieldset>
             <legend>PLATS</legend>
             <input type="radio" name="plat" value="coquille" id="coquille"/>
             <label for="coquille">
-                <div class="plat">Coquilles Saint-Jacques</div>
-                Accompagnées d'une purée de panais
-                <span class="prix">40€</span></label>
+                <span class="plat">Coquilles Saint-Jacques</span>
+                <p>Accompagnées d'une purée de panais</p>
+                <span class="price">40€</span></label>
             
             <input type="radio" name="plat" value="canard" id="canard"/>
             <label for="canard">
-                <div class="plat">Magret de canard</div>
-                Et parmentier de pommes de terre
-                <span class="prix">35€</span></label>
+                <span class="plat">Magret de canard</span>
+                <p>Et parmentier de pommes de terre</p>
+                <span class="price">35€</span></label>
 
             <input type="radio" name="plat" value="pigeon" id="pigeon"/>
             <label for="pigeon">
-                <div class="plat">Pigeonneau d’Ille-et-Vilaine</div>
-                Sur son lit de gnocchis aux légumes
-                <span class="prix">44€</span></label>
+                <span class="plat">Pigeonneau d’Ille-et-Vilaine</span>
+                <p>Sur son lit de gnocchis aux légumes</p>
+                <span class="price">44€</span></label>
         </fieldset>
 
         <fieldset>
             <legend>DESSERTS</legend>
             <input type="radio" name="dessert" value="violette" id="violette"/>
             <label for="violette">
-                <div class="plat">Pétales de violettes glacés</div>
-                Et purée de noisettes
-                <span class="prix">18€</span></label>
+                <span class="plat">Pétales de violettes glacés</span>
+                <p>Et purée de noisettes</p>
+                <span class="price">18€</span></label>
             
             <input type="radio" name="dessert" value="fondant" id="fondant"/>
             <label for="fondant">
-                <div class="plat">Fondant au chocolat</div>
-                Revisité
-                <span class="prix">22€</span></label>
+                <span class="plat">Fondant au chocolat</span>
+                <p>Revisité</p>
+                <span class="price">22€</span></label>
 
             <input type="radio" name="dessert" value="millefeuille" id="millefeuille"/>
             <label for="millefeuille">
-                <div class="plat">Millefeuille croustillant</div>
-                Myrtilles et pâte d’amande
-                <span class="prix">23€</span></label>
+                <span class="plat">Millefeuille croustillant</span>
+                <p>Myrtilles et pâte d’amande</p>
+                <span class="price">23€</span></label>
         </fieldset>
         <input type="submit" value="Commander" class="btn"/>
         
     </form>
+
+    <footer>
+        <div class="logo2">ohmyfood</div>
+        <ul>
+            <li><a href="#"><i class="fas fa-utensils fa-xs"></i> Proposer un restaurant</a></li>
+            <li><a href="#"><i class="fas fa-hands-helping fa-xs"></i> Devenir Partenaire</a></li>     
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="mailto:ohmyfood@gmail.com">Contact</a></li>
+        </ul>
+    </footer>
 
 </body>
 

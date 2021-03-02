@@ -18,6 +18,10 @@
     }
     .btn{
         @include btn;
+        margin-top: 40px;
+        :hover{
+            opacity: 0.5;
+        }
         }
         
 }

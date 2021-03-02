@@ -22,17 +22,35 @@ header{
      }
  }
  /*HEADER menu1*/
- header{
+ .header{
+     display: flex;
+     flex-direction: row;
+     width: 100%;
      .logo1{
-         i{
-             position:relative;
-             right:100px;
-             top:-5px;
-         }
-         
-     }
-       
- }
+         height:80px; 
+         width:200px;        
+         margin: auto;
+            @media all and (max-width:305px){
+                width:150px;          
+            }
+            img{
+                padding-top:30px;
+                @media all and (max-width:305px){
+                    width:150px;   
+            }            
+        }
+}     
+    .fa-big{ 
+         font-size:25px;
+         padding:30px;
+         position: absolute;
+         @media all and (max-width:305px){
+            font-size: 20px;
+            padding-left: 20px;            
+          
+        }
+     }   
+    }
  .img{
      width:100%;
      position:relative;
