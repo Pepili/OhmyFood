@@ -6,7 +6,7 @@
     @include background;      
     padding:70px 0 70px 0;
     &__title{
-        font-size: xx-large;
+        font-size: 28px;
         margin-top:0;
         margin-left:20px;
         font-weight:bold;
@@ -30,11 +30,11 @@
             position:relative;
             display:flex;
             flex-direction:column;
-            font-size:large;            
+            font-size:20px;            
             background-color: #ffffff;
             width:100%;
-            height:25%;
-            padding:15px;
+            height:auto;
+            padding:20px;
             padding-top:10px;
             border-radius:0 0 20px 20px;                
             .resto{
@@ -42,21 +42,24 @@
             }
             i{
                 position:absolute;
-                display:inline-block;
-                top:35%;
-                right:30px;                                      
+                color:lighten($color: black, $amount: 50%);                
+                top:28%;
+                right:30px; 
+                font-size: 30px;                                     
             }
             .new{
                 position:absolute;
                 background-color: $color-tertiary;
                 width:90px;
-                height:40px;
+                height:35px;
                 text-align:center;
-                line-height: 6px;
+                border-radius:2px;
+                line-height: 2px;
                 font-weight:bold;
+                font-size:16px;
                 right:20px;
                 top:-210px;
-                color:darken($color-tertiary, 32%)                    
+                color:darken($color-tertiary, 38%)                    
             }
         }
     }

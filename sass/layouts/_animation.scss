@@ -1,3 +1,23 @@
+.page{
+  visibility: hidden;
+  opacity:0;  
+  animation: showPage .6s linear 3s forwards; 
+}
+@keyframes showPage{
+  0%{
+    visibility: hidden;
+    opacity:0;    
+  }
+  1%{
+    visibility: visible;
+    opacity:0;    
+  }
+  100%{
+    visibility: visible;
+    opacity: 1;    
+  }
+}
+
 .loader{
     height: 115px;
     width: 115px;
@@ -7,24 +27,26 @@
     border-bottom-color: $color-tertiary;
     border-radius: 50%;
     margin:auto;
-    position: absolute;
-    -webkit-animation: spin 3s linear infinite;
-            animation: spin 3s linear infinite;            
+    position: fixed;
+    z-index: 1;
+    -webkit-animation: spin 3s linear infinite, hideloader .6s linear 2.7s forwards;
+            animation: spin 3s linear infinite, hideloader .6s linear 2.7s forwards; 
+
   }
   
   .loader::before{
     content: "";
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    bottom: 20px;
-    left: 20px;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
     border: 8px solid transparent;
-    border-top-color: $color-primary;
-    border-bottom-color: $color-secondary;
+    border-left-color: $color-primary;
+    border-right-color: $color-secondary;
     border-radius: 50%;
-    -webkit-animation: spin 1.5s linear infinite;
-    animation: spin 1.5s linear infinite;
+    -webkit-animation: spin 1.5s ease-in-out infinite;
+    animation: spin 1.5s ease-in-out infinite;
   }
   
   @-webkit-keyframes spin {
@@ -47,4 +69,19 @@
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
       }
+  
+  }
+  @keyframes hideloader{
+    0%{
+      visibility: visible;
+      opacity:1;    
+    }
+    99%{
+      visibility: visible;
+      opacity:0;    
+    }
+    100%{
+      visibility: hidden;
+      opacity: 0;    
+    }
   }

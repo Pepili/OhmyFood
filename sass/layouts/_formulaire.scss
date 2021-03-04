@@ -1,7 +1,7 @@
 /*form menu*/
 form{
     @include background;
-    padding-top:50px;
+    padding-top:60px;
     width:100%;  
     
     fieldset{
@@ -11,14 +11,15 @@ form{
         flex-direction: column;
         padding:0;
         legend{
-            font-size: x-large;            
+            font-size: 20px;            
             width:94%;
             margin: auto;
             margin-bottom: 20px;
+            color:lighten($color: black, $amount: 40%);
             &::after{
                 content: "";
                 display: block;                
-                width:60px;
+                width:50px;
                 height: 8px;                
                 border-bottom: 4px solid $color-tertiary;                
                 
@@ -31,7 +32,7 @@ form{
             box-shadow: 0px 4px 14px 5px rgb(219, 219, 219);
             background: white;
             height:auto;
-            line-height:26px;
+            line-height:28px;
             width:94%;
             margin:auto;
             border-radius:20px;
@@ -48,7 +49,7 @@ form{
                 } 
             }           
             .plat{
-                font-size:x-large;
+                font-size:20px;
                 font-weight:bold;
                 display: inline-block; 
                 width:80%;
@@ -56,6 +57,8 @@ form{
             p{
                 width:80%;
                 margin:0;
+                font-size: 16px;
+                color:lighten($color: black, $amount: 40%);
             }
             .price{
                 position:absolute;

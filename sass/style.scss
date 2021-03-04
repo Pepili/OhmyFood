@@ -4,12 +4,10 @@
 @import "layouts/animation";
 @import "base/body";
 
-@media all and (max-width:599px)
-{
-    @import "layouts/header";
-    @import "layouts/section1";
-    @import "layouts/section2";
-    @import "layouts/section3";
-    @import "layouts/footer"; 
-    @import "layouts/formulaire";  
-}
+@import "layouts/header";
+@import "layouts/section1";
+@import "layouts/section2";
+@import "layouts/section3";
+@import "layouts/footer"; 
+@import "layouts/formulaire";  
+
