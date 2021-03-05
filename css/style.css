@@ -173,6 +173,7 @@ header p i {
   header {
     flex-direction: row;
     justify-content: space-between;
+    background-color: #ebebeb;
   }
   header .logo1 {
     height: 200px;
@@ -184,7 +185,6 @@ header p i {
     padding-top: 0;
   }
   header p {
-    background: white;
     box-shadow: none;
     height: 100px;
     line-height: 100px;
@@ -332,6 +332,9 @@ header p i {
   }
 }
 @media all and (min-width: 901px) {
+  .section1 {
+    box-shadow: inset -1px 5px 5px -2px #b9b8b9;
+  }
   .section1 .btn {
     width: 400px;
   }
@@ -503,6 +506,7 @@ header p i {
 @media all and (min-width: 901px) {
   .section3 {
     padding: 30px;
+    box-shadow: inset -1px 5px 5px -2px #b9b8b9;
   }
 
   .carte {
@@ -511,6 +515,7 @@ header p i {
     grid-gap: 25px;
     grid-auto-rows: 300px;
     margin: 0;
+    padding-top: 10px !important;
   }
   .carte a figure {
     display: block;

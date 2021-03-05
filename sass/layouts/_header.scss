@@ -42,6 +42,7 @@ header{
      header{
          flex-direction: row;
          justify-content: space-between;
+         background-color: darken($color: white, $amount: 8%);
          .logo1{
              height:200px;
              padding-left:30px;
@@ -52,7 +53,6 @@ header{
              }
          }
          p{
-             background:white;
              box-shadow: none;
              height:100px;
              line-height: 100px;
@@ -125,7 +125,7 @@ header{
      }     
  }
 @media all and (min-width:901px){
-    .header{
+    .header{        
         .logo1{
             height:120px;
             width:300px;

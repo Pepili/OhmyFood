@@ -36,6 +36,7 @@
 }
 @media all and (min-width:901px){
     .section1{
+        @include shadow;
         .btn{
             width:400px;
         }
