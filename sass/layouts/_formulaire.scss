@@ -2,7 +2,8 @@
 form{
     @include background;
     padding-top:60px;
-    width:100%;  
+    width:100%; 
+    padding-bottom: 80px; 
     
     fieldset{
         border:none;
@@ -72,9 +73,45 @@ form{
     }
     input[type=submit].btn{
         @include btn;
-        border:none;
-        margin-bottom: 80px;
+        border:none;        
         display:block;  
-        outline: none;     
+        outline: none;        
+        }     
     }
+
+@media all and (min-width:780px){
+    input[type=submit].btn{
+    font-size:25px !important;
+    width:50%!important;
+    }
+}
+
+@media all and (min-width:901px){
+    form{
+        padding-top:100px;
+        fieldset{
+            legend{
+                font-size:25px;
+            }
+            input[type=radio]{
+                +label{
+                    width:800px;
+                    margin:20px 0 0 30px;
+                    .plat{
+                        font-size:25px;
+                    }
+                    p{
+                        font-size:20px;
+                    }
+                    .price{
+                        font-size:20px;
+                    }                    
+                }
+            } 
+        }
+        input[type=submit].btn{
+            width: 300px !important;
+            margin-top:70px;
+        }
+        }
 }

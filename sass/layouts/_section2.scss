@@ -64,3 +64,30 @@
             }
         }
 }
+@media all and (min-width:600px){
+    .section2{
+        li{
+            font-size:25px; 
+            padding-left: 20%;
+            i{
+                font-size:28px;
+            }           
+        }
+    }
+}
+@media all and (min-width:780px){
+    .section2{
+        li{
+            padding-left:25%;
+        }
+    }
+}
+@media all and (min-width:901px){
+    .section2{
+        li{
+            width:500px;
+            padding-left:50px;
+            margin:50px;
+        }
+    }
+}

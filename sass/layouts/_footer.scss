@@ -30,3 +30,17 @@ footer{
     }
         
     } 
+@media all and (min-width:901px){
+    footer{
+        .logo2{
+            font-size:30px;
+        }
+        li{
+            font-size:25px;
+            i{
+                font-size:20px;
+            }
+        }
+        
+    }    
+}

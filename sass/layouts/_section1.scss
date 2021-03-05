@@ -25,3 +25,19 @@
         }
         
 }
+@media all and (min-width:780px){
+    .section1{
+        padding-top:60px;
+        .btn{
+            font-size:25px;
+            width:50%;
+        }
+    }
+}
+@media all and (min-width:901px){
+    .section1{
+        .btn{
+            width:400px;
+        }
+    }
+}
