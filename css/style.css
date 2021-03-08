@@ -10,6 +10,13 @@
   font-style: normal;
 }
 @font-face {
+  font-family: "robotobold";
+  src: url("../fonts/robotobold/Roboto-Bold-webfont.ttf") format("truetype");
+  src: url("../fonts/robotobold/Roboto-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/robotobold/Roboto-Bold-webfont.woff") format("woff"), url("../fonts/robotobold/Roboto-Bold-webfont.eot"), url("../fonts/robotobold/Roboto-Bold-webfont.svg#robotobold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: "Shrikhand-Regular";
   src: url("../fonts/shrikhand/Shrikhand-Regular.ttf") format("truetype");
   font-weight: bold;
@@ -239,7 +246,7 @@ header p i {
   object-fit: cover;
 }
 .img figcaption {
-  font-family: "shrikhand";
+  font-family: "shrikhand-regular";
   position: absolute;
   font-size: 35px;
   font-weight: bold;
@@ -291,20 +298,22 @@ header p i {
   text-align: center;
   width: 100%;
   padding: 40px 0 80px 0;
-  margin-bottom: 80px;
+  margin-bottom: 70px;
   background-color: #f7f7f7;
 }
 .section1__label {
-  font-size: 28px;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 20px !important;
   width: 80%;
   margin: auto;
+  font-family: "robotobold";
 }
 .section1 p {
   font-size: x-large;
   width: 90%;
   margin: auto;
+  color: #4d4d4d;
 }
 .section1 .btn {
   color: white;
@@ -312,14 +321,40 @@ header p i {
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   box-shadow: 0px 6px 14px 1px #bdbdbd;
   border-radius: 40px;
+  cursor: pointer;
   width: 60%;
   margin: auto;
   height: auto;
   padding: 18px;
+  position: relative;
+  z-index: 1;
+  transform: scale(1);
+  transition: transform 500ms ease-in-out;
   margin-top: 40px;
+  position: relative;
+  z-index: 1;
+  transform: scale(1);
+  transition: transform 500ms ease-in-out;
 }
-.section1 .btn :hover {
-  opacity: 0.5;
+.section1 .btn:hover {
+  transform: scale(1.1);
+}
+.section1 .btn:hover::after {
+  opacity: 1;
+}
+.section1 .btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  z-index: -1;
+  border-radius: 40px;
+  transition: opacity 500ms ease-in-out;
+  background: linear-gradient(to bottom right, #ff93e1, #a16be0);
+  box-shadow: 0px 10px 18px 10px #bdbdbd;
 }
 
 @media all and (min-width: 780px) {
@@ -341,14 +376,17 @@ header p i {
 }
 /*SECTION 2*/
 .section2 {
-  margin-bottom: 80px;
+  margin-bottom: 70px;
+  background-color: white;
 }
 .section2__title {
-  font-size: 28px;
-  margin-left: 20px;
+  font-size: 30px;
   font-weight: bold;
+  font-family: "robotobold";
+  margin: 0 0 30px 20px;
 }
 .section2__list li {
+  background-color: #f7f7f7;
   display: flex;
   position: relative;
   font-size: 20px;
@@ -421,6 +459,9 @@ header p i {
   }
 }
 @media all and (min-width: 901px) {
+  .section2 {
+    padding-bottom: 20px;
+  }
   .section2 li {
     width: 500px;
     padding-left: 50px;
@@ -430,19 +471,21 @@ header p i {
 /*SECTION 3*/
 .section3 {
   background-color: #f7f7f7;
+  padding-top: 60px !important;
 }
 .section3__title {
-  font-size: 28px;
+  font-size: 30px;
   margin-top: 0;
   margin-left: 20px;
   font-weight: bold;
+  font-family: "robotobold";
 }
 
 .carte {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-top: 70px !important;
+  padding-top: 10px !important;
   padding-bottom: 70px !important;
 }
 .carte figure {
@@ -506,7 +549,7 @@ header p i {
 @media all and (min-width: 901px) {
   .section3 {
     padding: 30px;
-    box-shadow: inset -1px 5px 5px -2px #b9b8b9;
+    box-shadow: inset 5px 5px 25px #cccccc, inset -5px -5px 25px #cccccc;
   }
 
   .carte {
@@ -646,19 +689,44 @@ form fieldset input[type=radio] + label .price {
   bottom: 12px;
   font-weight: bold;
 }
-form input[type=submit].btn {
+form button[type=submit].btn {
   color: white;
   font-size: 20px;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   box-shadow: 0px 6px 14px 1px #bdbdbd;
   border-radius: 40px;
+  cursor: pointer;
   width: 60%;
   margin: auto;
   height: auto;
   padding: 18px;
+  position: relative;
+  z-index: 1;
+  transform: scale(1);
+  transition: transform 500ms ease-in-out;
   border: none;
   display: block;
   outline: none;
+}
+form button[type=submit].btn:hover {
+  transform: scale(1.1);
+}
+form button[type=submit].btn:hover::after {
+  opacity: 1;
+}
+form button[type=submit].btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  z-index: -1;
+  border-radius: 40px;
+  transition: opacity 500ms ease-in-out;
+  background: linear-gradient(to bottom right, #ff93e1, #a16be0);
+  box-shadow: 0px 10px 18px 10px #bdbdbd;
 }
 
 @media all and (min-width: 780px) {
@@ -687,9 +755,10 @@ form input[type=submit].btn {
   form fieldset input[type=radio] + label .price {
     font-size: 20px;
   }
-  form input[type=submit].btn {
+  form button[type=submit].btn {
     width: 300px !important;
     margin-top: 70px;
+    font-size: 24px;
   }
 }
 

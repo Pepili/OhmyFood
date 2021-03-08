@@ -5,22 +5,34 @@
     @include margin;
     @include background;     
     &__label{
-        font-size: 28px;
+        font-size: 30px;
         font-weight: bold;
         margin-bottom:20px !important;
         width:80%;
         margin:auto;
+        font-family: 'robotobold';
     }
     p{
         font-size: x-large;
         width: 90%;
-        margin:auto;       
+        margin:auto;  
+        color:lighten($color: #000000, $amount: 30%);     
     }
     .btn{
         @include btn;
         margin-top: 40px;
-        :hover{
-            opacity: 0.5;
+        position:relative;
+        z-index:1;
+        transform:scale(1); 
+        transition:transform 500ms ease-in-out;       
+        &:hover{
+            transform:scale(1.1);
+            &::after{ 
+            opacity: 1;
+            }
+        }
+        &::after{
+            @include afterbtn;
         }
         }
         

@@ -71,11 +71,20 @@ form{
         } 
     }       
     }
-    input[type=submit].btn{
+    button[type=submit].btn{
         @include btn;
         border:none;        
         display:block;  
-        outline: none;        
+        outline: none;
+        &:hover{
+            transform: scale(1.1);
+            &::after{
+                opacity:1;
+            }
+        }
+        &::after{
+            @include afterbtn;
+        }        
         }     
     }
 
@@ -109,9 +118,10 @@ form{
                 }
             } 
         }
-        input[type=submit].btn{
+        button[type=submit].btn{
             width: 300px !important;
             margin-top:70px;
+            font-size:24px;
         }
         }
 }

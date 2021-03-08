@@ -1,13 +1,16 @@
 /*SECTION 2*/
 .section2{
     @include margin;
+    background-color: white;
     &__title{
-        font-size: 28px;
-        margin-left:20px;
+        font-size: 30px;        
         font-weight:bold;
+        font-family: 'robotobold';
+        margin:0 0 30px 20px
     }
     &__list{
         li{
+            @include background;
             display: flex;
             position:relative;
             font-size:20px;   
@@ -84,6 +87,7 @@
 }
 @media all and (min-width:901px){
     .section2{
+        padding-bottom: 20px;
         li{
             width:500px;
             padding-left:50px;
