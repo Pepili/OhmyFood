@@ -23,22 +23,28 @@
             font-weight:bold;
             height:auto;
             margin-bottom: 30px;
+            animation: bg 3s linear infinite;
+            @for $i from 0 through 3{
+                &:nth-of-type(#{$i+1}){
+                    animation-delay:#{$i}s;
+                }
+            }
             @media all and (max-width:394px){
                 padding-left: 30px;
                 font-size:18px;
             }            
-            i{
+            span{
                 font-size:22px;
                 width:50px;                                    
                 color:grey;
                 position: relative;
                 top:3px;
+                animation: ico 3s linear infinite;              
                 @media all and (max-width:394px){
                     width: 40px;  
                     font-size:18px;              
                 } 
-            }   
-                   
+            }
             &::before{
                 display:inline-block;
                 background-color: $color-primary;
@@ -66,6 +72,43 @@
           
             }
         }
+}
+.fa-mobile-alt{
+    animation-delay:0s!important;
+}
+.fa-list-ul{
+    animation-delay: 1s!important;
+}
+.fa-store{
+    animation-delay: 2s!important;
+}
+@keyframes bg{
+    0%{
+        background-color: $lighten-primary;
+    }
+    28%{
+        background-color: $lighten-primary;
+    }
+    29%{
+        @include background;
+    }
+    100%{
+        @include background;
+    }
+}
+@keyframes ico{
+    0%{
+        color:$color-primary;
+    }
+    28%{
+        color:$color-primary;
+    }
+    29%{
+        color:grey;
+    }
+    100%{
+        color:grey;
+    }
 }
 @media all and (min-width:600px){
     .section2{

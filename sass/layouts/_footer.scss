@@ -14,10 +14,10 @@ footer{
     
     li{
         padding-bottom: 10px; 
-        font-size: 20px;    
+        font-size: 20px;     
         a{
             color:lighten($color: rgb(48, 47, 47), $amount: 75%);
-            display: flex;
+            display: flex;            
         }
         i{
             padding-right:10px;                
@@ -25,7 +25,7 @@ footer{
             font-size:16px;    
             text-align: center;
             position:relative;
-            top:5px;
+            top:5px;             
             }          
     }
         

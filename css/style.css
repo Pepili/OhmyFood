@@ -399,6 +399,19 @@ header p i {
   font-weight: bold;
   height: auto;
   margin-bottom: 30px;
+  animation: bg 3s linear infinite;
+}
+.section2__list li:nth-of-type(1) {
+  animation-delay: 0s;
+}
+.section2__list li:nth-of-type(2) {
+  animation-delay: 1s;
+}
+.section2__list li:nth-of-type(3) {
+  animation-delay: 2s;
+}
+.section2__list li:nth-of-type(4) {
+  animation-delay: 3s;
 }
 @media all and (max-width: 394px) {
   .section2__list li {
@@ -406,15 +419,16 @@ header p i {
     font-size: 18px;
   }
 }
-.section2__list li i {
+.section2__list li span {
   font-size: 22px;
   width: 50px;
   color: grey;
   position: relative;
   top: 3px;
+  animation: ico 3s linear infinite;
 }
 @media all and (max-width: 394px) {
-  .section2__list li i {
+  .section2__list li span {
     width: 40px;
     font-size: 18px;
   }
@@ -444,6 +458,46 @@ header p i {
   content: "3";
 }
 
+.fa-mobile-alt {
+  animation-delay: 0s !important;
+}
+
+.fa-list-ul {
+  animation-delay: 1s !important;
+}
+
+.fa-store {
+  animation-delay: 2s !important;
+}
+
+@keyframes bg {
+  0% {
+    background-color: #f2eafb;
+  }
+  28% {
+    background-color: #f2eafb;
+  }
+  29% {
+    background-color: #f7f7f7;
+  }
+  100% {
+    background-color: #f7f7f7;
+  }
+}
+@keyframes ico {
+  0% {
+    color: #9356DC;
+  }
+  28% {
+    color: #9356DC;
+  }
+  29% {
+    color: grey;
+  }
+  100% {
+    color: grey;
+  }
+}
 @media all and (min-width: 600px) {
   .section2 li {
     font-size: 25px;
@@ -496,6 +550,11 @@ header p i {
   box-shadow: 0px 4px 14px 5px #dbdbdb;
   margin: auto;
   margin-bottom: 30px;
+  transform: scale(1);
+  transition: transform 250ms ease-in-out;
+}
+.carte figure:hover {
+  transform: scale(0.95);
 }
 .carte figure img {
   height: 75%;
