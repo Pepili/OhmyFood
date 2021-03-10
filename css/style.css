@@ -248,6 +248,8 @@ header p i {
 .img figcaption {
   font-family: "shrikhand-regular";
   position: absolute;
+  display: flex;
+  justify-content: space-between;
   font-size: 35px;
   font-weight: bold;
   width: 100%;
@@ -258,12 +260,32 @@ header p i {
   font-style: italic;
   background-color: #f7f7f7;
 }
-.img figcaption i {
-  color: gray;
+.img figcaption .heart {
+  position: relative;
+  cursor: pointer;
+}
+.img figcaption .heart i {
   font-size: 29px;
+}
+.img figcaption .heart .far {
+  color: gray;
+}
+.img figcaption .heart .fas {
   position: absolute;
-  right: 46px;
-  top: 35px;
+  color: transparent;
+  width: 30px;
+  right: -1px;
+  top: 11px;
+  transition: all 250ms linear;
+  background: #9356DC;
+  background: linear-gradient(0deg, #f7f7f7 0%, #f7f7f7 49%, #FF79DA 50%, #9356DC 100%);
+  background-size: 200% 200%;
+  background-repeat: no-repeat;
+  background-position-y: 29px;
+  background-clip: text;
+}
+.img figcaption .heart .fas:hover {
+  background-position-y: 0;
 }
 
 @media all and (min-width: 901px) {
@@ -554,7 +576,7 @@ header p i {
   transition: transform 250ms ease-in-out;
 }
 .carte figure:hover {
-  transform: scale(0.95);
+  transform: scale(0.98);
 }
 .carte figure img {
   height: 75%;
@@ -566,8 +588,7 @@ header p i {
 .carte figure figcaption {
   position: relative;
   display: flex;
-  flex-direction: column;
-  font-size: 20px;
+  justify-content: space-between;
   background-color: #ffffff;
   width: 100%;
   height: auto;
@@ -575,15 +596,46 @@ header p i {
   padding-top: 10px;
   border-radius: 0 0 20px 20px;
 }
+.carte figure figcaption .restolieu {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+.carte figure figcaption .restolieu p {
+  margin: 0;
+  color: #4d4d4d;
+}
 .carte figure figcaption .resto {
   font-weight: bold;
 }
-.carte figure figcaption i {
-  position: absolute;
+.carte figure figcaption .heart {
+  position: relative;
+  cursor: pointer;
+  top: 10px;
+  right: 10px;
+}
+.carte figure figcaption .heart i {
+  font-size: 29px;
+}
+.carte figure figcaption .heart .far {
   color: gray;
-  top: 28%;
-  right: 30px;
-  font-size: 30px;
+}
+.carte figure figcaption .heart .fas {
+  position: absolute;
+  color: transparent;
+  width: 30px;
+  right: -1px;
+  transition: all 250ms linear;
+  background: #9356DC;
+  background: linear-gradient(0deg, #f7f7f7 0%, #f7f7f7 49%, #FF79DA 50%, #9356DC 100%);
+  background-size: 200% 200%;
+  background-repeat: no-repeat;
+  background-position-y: 29px;
+  background-clip: text;
+}
+.carte figure figcaption .heart .fas:hover {
+  background-position-y: 0;
+  transform: scale(1.1);
 }
 .carte figure figcaption .new {
   position: absolute;
@@ -711,7 +763,8 @@ form fieldset legend::after {
 form fieldset input[type=radio] {
   display: none;
 }
-form fieldset input[type=radio] + label {
+
+label {
   box-shadow: 0px 4px 14px 5px #dbdbdb;
   background: white;
   height: auto;
@@ -723,32 +776,62 @@ form fieldset input[type=radio] + label {
   font-size: large;
   position: relative;
   padding: 12px;
+  opacity: 0;
+  animation: showlabel linear 400ms forwards;
 }
-form fieldset input[type=radio] + label:not(.price):hover {
+label:nth-of-type(1) {
+  animation-delay: 0s;
+}
+label:nth-of-type(2) {
+  animation-delay: 0.25s;
+}
+label:nth-of-type(3) {
+  animation-delay: 0.5s;
+}
+label:nth-of-type(4) {
+  animation-delay: 0.75s;
+}
+label:not(.price):hover {
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-form fieldset input[type=radio] + label .plat {
+label:not(.price) .plat {
   font-size: 20px;
   font-weight: bold;
   display: inline-block;
   width: 80%;
 }
-form fieldset input[type=radio] + label p {
+label:not(.price) p {
   width: 80%;
   margin: 0;
   font-size: 16px;
   color: #666666;
 }
-form fieldset input[type=radio] + label .price {
+label:not(.price) .price {
   position: absolute;
   right: 30px;
   bottom: 12px;
   font-weight: bold;
 }
-form button[type=submit].btn {
+
+@keyframes showlabel {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+  1% {
+    opacity: 0;
+    visibility: visible;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+button[type=submit].btn {
   color: white;
   font-size: 20px;
   background: linear-gradient(to bottom right, #FF79DA, #9356DC);
@@ -767,13 +850,13 @@ form button[type=submit].btn {
   display: block;
   outline: none;
 }
-form button[type=submit].btn:hover {
+button[type=submit].btn:hover {
   transform: scale(1.1);
 }
-form button[type=submit].btn:hover::after {
+button[type=submit].btn:hover::after {
   opacity: 1;
 }
-form button[type=submit].btn::after {
+button[type=submit].btn::after {
   content: "";
   position: absolute;
   top: 0;

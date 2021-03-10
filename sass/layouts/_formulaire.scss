@@ -22,71 +22,90 @@ form{
                 display: block;                
                 width:50px;
                 height: 8px;                
-                border-bottom: 4px solid $color-tertiary;                
-                
+                border-bottom: 4px solid $color-tertiary;            
             }
         }        
         input[type=radio]{
-            display: none;
-        
-        +label{
-            box-shadow: 0px 4px 14px 5px rgb(219, 219, 219);
-            background: white;
-            height:auto;
-            line-height:28px;
-            width:94%;
-            margin:auto;
-            border-radius:20px;
-            margin-bottom: 20px;
-            font-size: large;
-            position:relative;
-            padding:12px;
-            &:not(.price){                                        
-                &:hover{
-                    display: inline-block;
-                    white-space: nowrap;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                } 
-            }           
-            .plat{
-                font-size:20px;
-                font-weight:bold;
-                display: inline-block; 
-                width:80%;
-            }
-            p{
-                width:80%;
-                margin:0;
-                font-size: 16px;
-                color:lighten($color: black, $amount: 40%);
-            }
-            .price{
-                position:absolute;
-                right:30px;
-                bottom:12px;
-                font-weight: bold;
-            }
-            
-        } 
+            display: none;}                    
     }       
+}
+label{
+    box-shadow: 0px 4px 14px 5px rgb(219, 219, 219);
+    background: white;
+    height:auto;
+    line-height:28px;
+    width:94%;
+    margin:auto;
+    border-radius:20px;
+    margin-bottom: 20px;
+    font-size: large;
+    position:relative;
+    padding:12px;
+    opacity:0;
+    animation:showlabel linear 400ms forwards;
+    @for $i from 0 through 3{
+        &:nth-of-type(#{$i+1}){
+            animation-delay:#{$i * 0.25}s;}
     }
-    button[type=submit].btn{
-        @include btn;
-        border:none;        
-        display:block;  
-        outline: none;
+    &:not(.price){                                        
         &:hover{
-            transform: scale(1.1);
-            &::after{
-                opacity:1;
-            }
+            display: inline-block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
-        &::after{
-            @include afterbtn;
-        }        
-        }     
+        .plat{
+            font-size:20px;
+            font-weight:bold;
+            display: inline-block; 
+            width:80%;
+        }
+        p{
+            width:80%;
+            margin:0;
+            font-size: 16px;
+            color:lighten($color: black, $amount: 40%);
+        }
+        .price{
+            position:absolute;
+            right:30px;
+            bottom:12px;
+            font-weight: bold;
+        }          
     }
+}
+@keyframes showlabel{
+    0%{
+        opacity:0;
+        visibility: hidden;       
+    }
+    1%{
+        opacity:0;
+        visibility: visible;
+        transform:translateY(10px)
+    }   
+    100%{
+        opacity:1;
+        visibility: visible;
+    }
+
+}
+button[type=submit].btn{
+    @include btn;
+    border:none;        
+    display:block;  
+    outline: none;
+    &:hover{
+        transform: scale(1.1);
+        &::after{
+            opacity:1;
+        }
+    }
+    &::after{
+        @include afterbtn;
+    }        
+}     
+
 
 @media all and (min-width:780px){
     input[type=submit].btn{
