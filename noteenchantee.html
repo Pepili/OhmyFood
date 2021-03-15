@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8"/>
+    <title>OhmyFood</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css"/>
+    <meta name="viewport" content="initial-scale=1"/>    
+</head>
+
+<body>
+    <div class="header">
+        <a href="index.html"><i class="fas fa-arrow-left fa-big"></i></a><div class="logo1"><img src="images/logo/ohmyfood@2x.svg" alt="logo"/></div>        
+    </div>
+    <figure class="img">
+        <img src="images/restaurants/noteenchantee.jpg" alt="noteenchantee"/>
+        <figcaption>La note enchantée<div class="heart"><i class="far fa-heart"></i><i class="fas fa-heart"></i></div></figcaption>
+    </figure>
+    <form method="post" action="menu.php">
+        <fieldset>
+            <legend>ENTREES</legend>
+            <input type="radio" name="entree" value="ravioles" id="ravioles"/>
+            <label for="ravioles">
+                <div class="descriptif">
+                    <span class="plat">Ravioles de foie gras </span>
+                    <div class="line2"><p>Accompagnés de leur crème à la truffe</p><span class="price">25€</span></div>
+                </div>
+                <div class="check"><i class="fas fa-check-circle"></i></div> 
+            </label>
+            
+            <input type="radio" name="entree" value="caviar" id="caviar"/>
+            <label for="caviar">
+                <div class="descriptif">
+                    <span class="plat">Caviar osciètre </span>
+                    <p> Sur blini à la farine de blé noir <span class="price">35€</span></p>
+                </div>
+                <div class="check"><i class="fas fa-check-circle"></i></div> 
+            </label>
+
+            <input type="radio" name="entree" value="homard" id="homard"/>
+            <label for="homard">
+                <div class="descriptif">
+                    <span class="plat">Homard et espuma de potiron</span>
+                    <p> Mariné aux zestes d'orange <span class="price">20€</span></p>
+                </div>
+                <div class="check"><i class="fas fa-check-circle"></i></div> 
+            </label>
+            
+            <input type="radio" name="entree" value="foie" id="foie"/>
+            <label for="foie">
+                <div class="descriptif">
+                    <span class="plat">Foie gras de canard cuit entier</span>
+                    <p> Confiture de figue et pain toasté <span class="price">35€</span></p>
+                </div>
+                <div class="check"><i class="fas fa-check-circle"></i></div> 
+            </label>            
+        </fieldset>
+
+        <fieldset>
+            <legend>PLATS</legend>
+            <input type="radio" name="plat" value="coquille" id="coquille"/>
+            <label for="coquille">
+                <div class="descriptif">
+                    <span class="plat">Noix de coquilles Saint-Jacques</span>
+                    <p> Sur lit de purée de céleri-rave <span class="price">40€</span></p>
+                </div>
+                <div class="check"><i class="fas fa-check-circle"></i></div> 
+            </label>
+            
+            <input type="radio" name="plat" value="langoustine" id="langoustine"/>
+            <label for="langoustine">
+                <div class="descriptif">
+                    <span class="plat">Langoustine poêlée</span>
+                    <p> Purée de patate douce <span class="price">35€</span></p>
+                </div>
+                <div class="check"><i class="fas fa-check-circle"></i></div> 
+            </label>
+
+            <input type="radio" name="plat" value="mijote" id="mijote"/>
+            <label for="mijote">
+                <div class="descriptif">
+                    <span class="plat">Mijoté de queue de boeuf</span>
+                    <p> Et riz sauvage aux zestes de citron <span class="price">44€</span></p>
+                </div>
+                <div class="check"><i class="fas fa-check-circle"></i></div> 
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>DESSERTS</legend>
+            <input type="radio" name="dessert" value="macaron" id="macaron"/>
+            <label for="macaron">
+                <div class="descriptif">
+                    <span class="plat">Macaron noisette et chocolat</span>
+                    <p> Glace au caramel brun et sel de Guérande <span class="price">18€</span></p>
+                </div>
+                <div class="check"><i class="fas fa-check-circle"></i></div> 
+            </label>
+            
+            <input type="radio" name="dessert" value="baba" id="baba"/>
+            <label for="baba">
+                <div class="descriptif">
+                    <span class="plat">Baba au rhum revisité </span>
+                    <p> Avec son coulis de citron <span class="price">22€</span></p>
+                </div>
+                <div class="check"><i class="fas fa-check-circle"></i></div> 
+            </label>
+
+            <input type="radio" name="dessert" value="tarte" id="tarte"/>
+            <label for="tarte">
+                <div class="descriptif">
+                    <span class="plat">Tarte au citron meringuée</span>
+                    <p> Déstructurée <span class="price">23€</span></p>
+                </div>
+                <div class="check"><i class="fas fa-check-circle"></i></div> 
+            </label>
+        </fieldset>
+        <button type="submit" class="btn">Commander</button>
+        
+    </form>
+
+    <footer>
+        <div class="logo2">ohmyfood</div>
+        <ul>
+            <li><a href="#"><i class="fas fa-utensils fa-xs"></i> Proposer un restaurant</a></li>
+            <li><a href="#"><i class="fas fa-hands-helping fa-xs"></i> Devenir Partenaire</a></li>     
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="mailto:ohmyfood@gmail.com">Contact</a></li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>
