@@ -22,9 +22,9 @@
         width:90%;
         border-radius: 20px;
         height:300px;
-        box-shadow: 0px 4px 14px 5px rgb(219, 219, 219);
+        box-shadow: $shadow;
         margin:auto;
-        margin-bottom:30px;
+        margin-bottom:50px;
         transform:scale(1); 
         transition:transform 250ms ease-in-out;  
         &:hover{
@@ -71,22 +71,9 @@
                     color:lighten($color: black, $amount: 50%);                
                 }
                 .fas{
-                    position:absolute;
-                    color:transparent;
-                    width:30px;  
-                    right:-1px;                                  
-                    transition:all 250ms linear;
-                    background:$color-primary;
-                    background:linear-gradient(0deg, darken($color: white, $amount: 3%) 0%,
-                               darken($color: white, $amount: 3%) 49%,
-                               $color-secondary 50%, $color-primary 100%);
-                    background-size: 200% 200%;
-                    background-repeat: no-repeat;
-                    background-position-y:29px;
-                    background-clip: text;                
+                    @include heart;             
                     &:hover{
-                        background-position-y: 0;
-                        transform: scale(1.1);
+                        background-position-y: 0;                        
                     }
                 }
             }         

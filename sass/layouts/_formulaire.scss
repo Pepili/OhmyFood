@@ -1,7 +1,6 @@
 /*form menu*/
 form{
-    @include background;
-    padding-top:60px;
+    @include background;    
     width:100%; 
     padding-bottom: 80px; 
     
@@ -17,6 +16,7 @@ form{
             margin: auto;
             margin-bottom: 20px;
             color:lighten($color: black, $amount: 40%);
+            padding-top:60px;
             &::after{
                 content: "";
                 display: block;                
@@ -30,7 +30,8 @@ form{
     }       
 }
 label{
-    box-shadow: 0px 4px 14px 5px rgb(219, 219, 219);
+    display: flex;    
+    box-shadow: $shadow;
     background: white;
     height:auto;
     line-height:28px;
@@ -39,40 +40,67 @@ label{
     border-radius:20px;
     margin-bottom: 20px;
     font-size: large;
-    position:relative;
-    padding:12px;
+    position:relative;    
     opacity:0;
     animation:showlabel linear 400ms forwards;
+    cursor: pointer;
     @for $i from 0 through 3{
         &:nth-of-type(#{$i+1}){
             animation-delay:#{$i * 0.25}s;}
     }
-    &:not(.price){                                        
-        &:hover{
-            display: inline-block;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
+    .descriptif{
+        padding:12px 0 12px 12px;
+        width:100%;                
         .plat{
             font-size:20px;
             font-weight:bold;
             display: inline-block; 
-            width:80%;
+            width:100%;
         }
-        p{
-            width:80%;
-            margin:0;
-            font-size: 16px;
-            color:lighten($color: black, $amount: 40%);
-        }
-        .price{
-            position:absolute;
-            right:30px;
-            bottom:12px;
-            font-weight: bold;
-        }          
+        .line2{
+            display: flex;
+            p{
+                width:100%;
+                margin:0;
+                font-size: 16px;
+                color:lighten($color: black, $amount: 40%);                
+            }
+            .price{            
+                font-weight: bold;
+                color:black;            
+                padding-right: 15px;
+            }
+        }   
     }
+    .check{
+        background-color:$color-tertiary;
+        position: relative;            
+        width:0px;
+        border-radius: 0 20px 20px 0; 
+        transition: width 0.4s ease-in-out; 
+        overflow: hidden;          
+        i{
+            font-size:35px;
+            color:white;
+            position: absolute;
+            top:30%;
+            left:26%;  
+            transform: rotate(0deg);           
+            transition: transform .4s ease-in-out;               
+        }
+    }
+    &:hover .check{
+        width:100px;        
+    }
+    // &:hover p{
+    //     text-overflow: ellipsis;
+    //     overflow: hidden;
+    //     white-space: nowrap;
+    // }
+    &:hover i{
+        transform:rotate(360deg);
+    }
+
 }
 @keyframes showlabel{
     0%{
@@ -116,7 +144,6 @@ button[type=submit].btn{
 
 @media all and (min-width:901px){
     form{
-        padding-top:100px;
         fieldset{
             legend{
                 font-size:25px;

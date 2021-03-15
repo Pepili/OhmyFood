@@ -198,7 +198,7 @@ header p i {
     padding-right: 30px;
   }
 }
-/*HEADER menu1*/
+/*HEADER menu*/
 .header {
   display: flex;
   flex-direction: row;
@@ -222,13 +222,13 @@ header p i {
     width: 150px;
   }
 }
-.header .fa-big {
+.header .fa-arrow-left {
   font-size: 25px;
   padding: 30px;
   position: absolute;
 }
 @media all and (max-width: 305px) {
-  .header .fa-big {
+  .header .fa-arrow-left {
     font-size: 20px;
     padding-left: 20px;
   }
@@ -247,16 +247,17 @@ header p i {
 }
 .img figcaption {
   font-family: "shrikhand-regular";
-  position: absolute;
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
-  font-size: 35px;
+  font-size: 26px;
   font-weight: bold;
   width: 100%;
-  height: 30%;
-  border-radius: 50px 50px 0 0;
-  padding: 30px 80px 0 40px;
-  top: 240px;
+  height: auto;
+  border-radius: 30px 30px 0 0;
+  padding: 30px;
+  top: -81px;
   font-style: italic;
   background-color: #f7f7f7;
 }
@@ -275,7 +276,6 @@ header p i {
   color: transparent;
   width: 30px;
   right: -1px;
-  top: 11px;
   transition: all 250ms linear;
   background: #9356DC;
   background: linear-gradient(0deg, #f7f7f7 0%, #f7f7f7 49%, #FF79DA 50%, #9356DC 100%);
@@ -283,6 +283,7 @@ header p i {
   background-repeat: no-repeat;
   background-position-y: 29px;
   background-clip: text;
+  top: 2px;
 }
 .img figcaption .heart .fas:hover {
   background-position-y: 0;
@@ -297,20 +298,25 @@ header p i {
     height: 120px;
     width: 300px;
   }
-  .header .fa-big {
-    font-size: 35px;
-    padding: 50px;
+  .header .fa-arrow-left {
+    display: none;
   }
 
   .img {
     height: 400px;
   }
   .img figcaption {
-    top: 360px;
-    font-size: 40px;
-  }
-  .img figcaption i {
     font-size: 35px;
+    border-radius: 50px 50px 0 0;
+  }
+  .img figcaption .heart i {
+    font-size: 35px;
+  }
+  .img figcaption .heart .fas {
+    right: 0px;
+    width: 35px;
+    background-position-y: 35px;
+    top: 6px;
   }
 }
 /*SECTION 1*/
@@ -416,7 +422,7 @@ header p i {
   padding-left: 50px;
   width: 90%;
   margin: auto;
-  box-shadow: 0px 4px 14px 5px #dbdbdb;
+  box-shadow: 0px 6px 14px 1px #bdbdbd;
   border-radius: 25px;
   font-weight: bold;
   height: auto;
@@ -569,9 +575,9 @@ header p i {
   width: 90%;
   border-radius: 20px;
   height: 300px;
-  box-shadow: 0px 4px 14px 5px #dbdbdb;
+  box-shadow: 0px 6px 14px 1px #bdbdbd;
   margin: auto;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   transform: scale(1);
   transition: transform 250ms ease-in-out;
 }
@@ -635,7 +641,6 @@ header p i {
 }
 .carte figure figcaption .heart .fas:hover {
   background-position-y: 0;
-  transform: scale(1.1);
 }
 .carte figure figcaption .new {
   position: absolute;
@@ -735,7 +740,6 @@ footer li i {
 /*form menu*/
 form {
   background-color: #f7f7f7;
-  padding-top: 60px;
   width: 100%;
   padding-bottom: 80px;
 }
@@ -752,6 +756,7 @@ form fieldset legend {
   margin: auto;
   margin-bottom: 20px;
   color: #666666;
+  padding-top: 60px;
 }
 form fieldset legend::after {
   content: "";
@@ -765,7 +770,8 @@ form fieldset input[type=radio] {
 }
 
 label {
-  box-shadow: 0px 4px 14px 5px #dbdbdb;
+  display: flex;
+  box-shadow: 0px 6px 14px 1px #bdbdbd;
   background: white;
   height: auto;
   line-height: 28px;
@@ -775,9 +781,9 @@ label {
   margin-bottom: 20px;
   font-size: large;
   position: relative;
-  padding: 12px;
   opacity: 0;
   animation: showlabel linear 400ms forwards;
+  cursor: pointer;
 }
 label:nth-of-type(1) {
   animation-delay: 0s;
@@ -791,29 +797,52 @@ label:nth-of-type(3) {
 label:nth-of-type(4) {
   animation-delay: 0.75s;
 }
-label:not(.price):hover {
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+label .descriptif {
+  padding: 12px 0 12px 12px;
+  width: 100%;
 }
-label:not(.price) .plat {
+label .descriptif .plat {
   font-size: 20px;
   font-weight: bold;
   display: inline-block;
-  width: 80%;
+  width: 100%;
 }
-label:not(.price) p {
-  width: 80%;
+label .descriptif .line2 {
+  display: flex;
+}
+label .descriptif .line2 p {
+  width: 100%;
   margin: 0;
   font-size: 16px;
   color: #666666;
 }
-label:not(.price) .price {
-  position: absolute;
-  right: 30px;
-  bottom: 12px;
+label .descriptif .line2 .price {
   font-weight: bold;
+  color: black;
+  padding-right: 15px;
+}
+label .check {
+  background-color: #99E2D0;
+  position: relative;
+  width: 0px;
+  border-radius: 0 20px 20px 0;
+  transition: width 0.4s ease-in-out;
+  overflow: hidden;
+}
+label .check i {
+  font-size: 35px;
+  color: white;
+  position: absolute;
+  top: 30%;
+  left: 26%;
+  transform: rotate(0deg);
+  transition: transform 0.4s ease-in-out;
+}
+label:hover .check {
+  width: 100px;
+}
+label:hover i {
+  transform: rotate(360deg);
 }
 
 @keyframes showlabel {
@@ -878,9 +907,6 @@ button[type=submit].btn::after {
   }
 }
 @media all and (min-width: 901px) {
-  form {
-    padding-top: 100px;
-  }
   form fieldset legend {
     font-size: 25px;
   }
