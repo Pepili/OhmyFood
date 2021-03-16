@@ -30,8 +30,8 @@
     margin:auto;
     position: fixed;
     z-index: 1;
-    -webkit-animation: spin 3s linear 4, hideloader .6s linear 2.7s forwards;
-            animation: spin 3s linear 4, hideloader .6s linear 2.7s forwards; 
+    -webkit-animation: spin 3s linear 2, hideloader .6s linear 2.7s forwards;
+            animation: spin 3s linear 2, hideloader .6s linear 2.7s forwards; 
 
   }
   
@@ -46,8 +46,8 @@
     border-left-color: $color-primary;
     border-right-color: $color-secondary;
     border-radius: 50%;
-    -webkit-animation: spin 1.5s ease-in-out 4;
-    animation: spin 1.5s ease-in-out 4;
+    -webkit-animation: spin 1.5s ease-in-out 2;
+    animation: spin 1.5s ease-in-out 2;
   }
   
   @-webkit-keyframes spin {

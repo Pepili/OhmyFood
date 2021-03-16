@@ -2,21 +2,21 @@
 form{
     @include background;    
     width:100%; 
-    padding-bottom: 80px; 
+    padding: 50px 0 80px 0; 
     
-    fieldset{
+    fieldset{        
         border:none;
         margin-bottom:40px;
         display:flex;
         flex-direction: column;
         padding:0;
+        min-inline-size:0;
         legend{
             font-size: 20px;            
             width:94%;
             margin: auto;
             margin-bottom: 20px;
-            color:lighten($color: black, $amount: 40%);
-            padding-top:60px;
+            color:lighten($color: black, $amount: 40%);            
             &::after{
                 content: "";
                 display: block;                
@@ -34,7 +34,7 @@ label{
     box-shadow: $shadow;
     background: white;
     height:auto;
-    line-height:28px;
+    line-height:24px;
     width:94%;
     margin:auto;
     border-radius:20px;
@@ -50,25 +50,36 @@ label{
     }
     .descriptif{
         padding:12px 0 12px 12px;
-        width:100%;                
+        width:100%; 
+        overflow: hidden;
         .plat{
-            font-size:20px;
-            font-weight:bold;
-            display: inline-block; 
-            width:100%;
+            p{
+            margin:0;
+            padding:0;
+            font-size:18px;
+            font-weight:bold;            
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap; 
+            }
         }
         .line2{
-            display: flex;            
+            display: flex; 
+            justify-content: space-between;           
             p{
-                width:100%;
                 margin:0;
                 font-size: 16px;
-                color:lighten($color: black, $amount: 40%);                
+                color:lighten($color: black, $amount: 40%);  
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;   
+                          
             }
             .price{            
                 font-weight: bold;
-                color:black;            
-                padding-right: 15px;                
+                color:black;  
+                padding-right:12px;   
+                font-size: 17px;                    
             }
         }   
     }
@@ -76,6 +87,7 @@ label{
         background-color:$color-tertiary;
         position: relative;            
         width:0px;
+        flex-shrink: 0;
         border-radius: 0 20px 20px 0; 
         transition: width 0.4s ease-in-out; 
         overflow: hidden;          
@@ -85,20 +97,15 @@ label{
             position: absolute;
             top:30%;
             left:26%;  
-            transform: rotate(0deg);           
-            transition: transform .4s ease-in-out;               
+            transform: rotate(0deg);                        
         }
     }
     &:hover .check{
-        width:100px;        
-    }
-    // &:hover p{
-    //     text-overflow: ellipsis;
-    //     overflow: hidden;
-    //     white-space: nowrap;
-    // }
+        width:20%;        
+    }    
     &:hover i{
         transform:rotate(360deg);
+        transition: transform .5s ease-in-out;
     }
 
 }

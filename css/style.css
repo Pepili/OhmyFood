@@ -57,8 +57,8 @@
     margin: auto;
     position: fixed;
     z-index: 1;
-    -webkit-animation: spin 3s linear 4, hideloader 0.6s linear 2.7s forwards;
-    animation: spin 3s linear 4, hideloader 0.6s linear 2.7s forwards;
+    -webkit-animation: spin 3s linear 2, hideloader 0.6s linear 2.7s forwards;
+    animation: spin 3s linear 2, hideloader 0.6s linear 2.7s forwards;
   }
 
   .loader::before {
@@ -72,8 +72,8 @@
     border-left-color: #9356DC;
     border-right-color: #FF79DA;
     border-radius: 50%;
-    -webkit-animation: spin 1.5s ease-in-out 4;
-    animation: spin 1.5s ease-in-out 4;
+    -webkit-animation: spin 1.5s ease-in-out 2;
+    animation: spin 1.5s ease-in-out 2;
   }
 
   @-webkit-keyframes spin {
@@ -257,6 +257,7 @@ header p i {
   height: auto;
   border-radius: 30px 30px 0 0;
   padding: 30px;
+  padding-top: 20px;
   top: -81px;
   font-style: italic;
   background-color: #f7f7f7;
@@ -427,7 +428,7 @@ header p i {
   font-weight: bold;
   height: auto;
   margin-bottom: 30px;
-  animation: bg 3s linear infinite;
+  animation: bg 3s linear 6;
 }
 .section2__list li:nth-of-type(1) {
   animation-delay: 0s;
@@ -453,7 +454,7 @@ header p i {
   color: grey;
   position: relative;
   top: 3px;
-  animation: ico 3s linear infinite;
+  animation: ico 3s linear 6;
 }
 @media all and (max-width: 394px) {
   .section2__list li span {
@@ -741,7 +742,7 @@ footer li i {
 form {
   background-color: #f7f7f7;
   width: 100%;
-  padding-bottom: 80px;
+  padding: 50px 0 80px 0;
 }
 form fieldset {
   border: none;
@@ -749,6 +750,7 @@ form fieldset {
   display: flex;
   flex-direction: column;
   padding: 0;
+  min-inline-size: 0;
 }
 form fieldset legend {
   font-size: 20px;
@@ -756,7 +758,6 @@ form fieldset legend {
   margin: auto;
   margin-bottom: 20px;
   color: #666666;
-  padding-top: 60px;
 }
 form fieldset legend::after {
   content: "";
@@ -774,7 +775,7 @@ label {
   box-shadow: 0px 6px 14px 1px #bdbdbd;
   background: white;
   height: auto;
-  line-height: 28px;
+  line-height: 24px;
   width: 94%;
   margin: auto;
   border-radius: 20px;
@@ -800,31 +801,40 @@ label:nth-of-type(4) {
 label .descriptif {
   padding: 12px 0 12px 12px;
   width: 100%;
+  overflow: hidden;
 }
-label .descriptif .plat {
-  font-size: 20px;
+label .descriptif .plat p {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
   font-weight: bold;
-  display: inline-block;
-  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 label .descriptif .line2 {
   display: flex;
+  justify-content: space-between;
 }
 label .descriptif .line2 p {
-  width: 100%;
   margin: 0;
   font-size: 16px;
   color: #666666;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 label .descriptif .line2 .price {
   font-weight: bold;
   color: black;
-  padding-right: 15px;
+  padding-right: 12px;
+  font-size: 17px;
 }
 label .check {
   background-color: #99E2D0;
   position: relative;
   width: 0px;
+  flex-shrink: 0;
   border-radius: 0 20px 20px 0;
   transition: width 0.4s ease-in-out;
   overflow: hidden;
@@ -836,13 +846,13 @@ label .check i {
   top: 30%;
   left: 26%;
   transform: rotate(0deg);
-  transition: transform 0.4s ease-in-out;
 }
 label:hover .check {
-  width: 100px;
+  width: 20%;
 }
 label:hover i {
   transform: rotate(360deg);
+  transition: transform 0.5s ease-in-out;
 }
 
 @keyframes showlabel {
