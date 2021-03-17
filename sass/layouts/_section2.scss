@@ -23,7 +23,7 @@
             font-weight:bold;
             height:auto;
             margin-bottom: 30px;
-            animation: bg 3s linear 6;
+            animation: bg 3s linear 10;
             @for $i from 0 through 3{
                 &:nth-of-type(#{$i+1}){
                     animation-delay:#{$i}s;
@@ -39,7 +39,7 @@
                 color:grey;
                 position: relative;
                 top:3px;
-                animation: ico 3s linear 6;              
+                animation: ico 3s linear 10;              
                 @media all and (max-width:394px){
                     width: 40px;  
                     font-size:18px;              

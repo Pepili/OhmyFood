@@ -57,10 +57,7 @@ label{
             margin:0;
             padding:0;
             font-size:18px;
-            font-weight:bold;            
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap; 
+            font-weight:bold;           
             }
         }
         .line2{
@@ -95,9 +92,13 @@ label{
             font-size:35px;
             color:white;
             position: absolute;
-            top:30%;
-            left:26%;  
-            transform: rotate(0deg);                        
+            line-height:76px;
+            left:30%;  
+            transform: rotate(0deg); 
+            @media all and (max-width:350px){
+                font-size:28px;
+                left:25%;
+            }                       
         }
     }
     &:hover .check{
@@ -106,6 +107,11 @@ label{
     &:hover i{
         transform:rotate(360deg);
         transition: transform .5s ease-in-out;
+    }
+    &:hover p{
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap; 
     }
 
 }
@@ -147,6 +153,10 @@ button[type=submit].btn{
     font-size:25px !important;
     width:50%!important;
     }
+    .check{
+        i{
+            font-size:40px !important;
+        }
 }
 
 @media all and (min-width:901px){
@@ -157,7 +167,7 @@ button[type=submit].btn{
             }
             input[type=radio]{
                 +label{
-                    width:800px;
+                    width:700px;
                     margin:20px 0 0 30px;
                     .plat{
                         font-size:25px;
@@ -167,6 +177,7 @@ button[type=submit].btn{
                     }
                     .price{
                         font-size:20px;
+                    }                    
                     }                    
                 }
             } 
