@@ -1,17 +1,16 @@
 /*form menu*/
-form{
+.formulaire{
     @include background;    
     width:100%; 
     padding: 50px 0 80px 0; 
     
-    fieldset{        
+    section{        
         border:none;
         margin-bottom:40px;
         display:flex;
         flex-direction: column;
-        padding:0;
-        min-inline-size:0;
-        legend{
+        padding:0;        
+        h1{
             font-size: 20px;            
             width:94%;
             margin: auto;
@@ -24,12 +23,10 @@ form{
                 height: 8px;                
                 border-bottom: 4px solid $color-tertiary;            
             }
-        }        
-        input[type=radio]{
-            display: none;}                    
+        }                        
     }       
 }
-label{
+.label{
     display: flex;    
     box-shadow: $shadow;
     background: white;
@@ -53,12 +50,14 @@ label{
         width:100%; 
         overflow: hidden;
         .plat{
-            p{
             margin:0;
             padding:0;
             font-size:18px;
-            font-weight:bold;           
-            }
+            font-weight:bold;
+            width:80%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;                 
         }
         .line2{
             display: flex; 
@@ -66,11 +65,10 @@ label{
             p{
                 margin:0;
                 font-size: 16px;
-                color:lighten($color: black, $amount: 40%);  
+                color:lighten($color: black, $amount: 40%);
                 text-overflow: ellipsis;
                 overflow: hidden;
-                white-space: nowrap;   
-                          
+                white-space: nowrap;                         
             }
             .price{            
                 font-weight: bold;
@@ -91,14 +89,13 @@ label{
         i{
             font-size:35px;
             color:white;
-            position: absolute;
-            line-height:76px;
-            left:30%;  
-            transform: rotate(0deg); 
-            @media all and (max-width:350px){
+            position: absolute;             
+            transform: rotate(0deg);   
+            line-height:74px;  
+            right:35%;
+            @media all and (max-width:379px){
                 font-size:28px;
-                left:25%;
-            }                       
+            }                  
         }
     }
     &:hover .check{
@@ -108,13 +105,8 @@ label{
         transform:rotate(360deg);
         transition: transform .5s ease-in-out;
     }
-    &:hover p{
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap; 
-    }
-
 }
+
 @keyframes showlabel{
     0%{
         opacity:0;
@@ -153,39 +145,37 @@ button[type=submit].btn{
     font-size:25px !important;
     width:50%!important;
     }
-    .check{
-        i{
-            font-size:40px !important;
-        }
 }
 
 @media all and (min-width:901px){
-    form{
-        fieldset{
-            legend{
+    .formulaire{
+        section{
+            h1{
                 font-size:25px;
             }
-            input[type=radio]{
-                +label{
-                    width:700px;
-                    margin:20px 0 0 30px;
-                    .plat{
-                        font-size:25px;
-                    }
-                    p{
-                        font-size:20px;
-                    }
-                    .price{
-                        font-size:20px;
-                    }                    
-                    }                    
+            .label{
+                width:800px;
+                margin:20px 0 0 30px;
+                .plat{
+                    font-size:20px;
                 }
-            } 
-        }
+                p{
+                    font-size:20px;
+                }
+                .price{
+                    font-size:20px;
+                } 
+                .check{
+                    i{
+                        font-size:42px;
+                    }
+                }                   
+            }
+        }     
         button[type=submit].btn{
             width: 300px !important;
             margin-top:70px;
             font-size:24px;
         }
-        }
+    }
 }
