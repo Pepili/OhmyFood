@@ -118,6 +118,9 @@ header{
          top:-81px;
          font-style: italic;         
          @include background;
+         @media all and (min-width:1022){
+             top:-60px;             
+         }
          .heart{ 
             position:relative;             
             cursor: pointer;
@@ -138,21 +141,23 @@ header{
      }     
  }
 @media all and (min-width:901px){
-    .header{               
+    .header{   
+        .fa-arrow-left{ 
+            font-size:32px;
+            padding-top:60px;
+            position: absolute;                 
+        }                
         .logo1{
             height:120px;
-            width:300px;
+            width:222px;
             img{
                 height:120px;
-                width:300px;
+                width:222px;
             }
-        }
-        .fa-arrow-left{
-            display: none;
-        }       
+        }              
     }
     .img{
-        height:400px;
+        height:400px;        
         figcaption{        
             font-size:35px;
             border-radius: 50px 50px 0 0;
